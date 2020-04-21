@@ -21,7 +21,18 @@ def predict():
     output = round(prediction[0], 2)
 
     return render_template('index.html', prediction_text='Employee Salary should be $ {}'.format(output))
+//@app.route('/predict',methods=['POST'])
+def predict():
+    print(request.form.values())
+    //get values from request.form.values
+    //process the inputs/
+    // return the output
+    output=func(input)
+    //output->to json
+    //return output
+    return output
 
+    
 
 if __name__ == "__main__":
     app.run(debug=True)
